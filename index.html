@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacBook-Pro</title>
+
+    <!------------Bootstrap Css Link------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header></header>
+    <!-----------------------Main Start------------------- -->
+    <main>
+      <section>
+        <div class="container my-5">
+          <div class="row">
+            <div class="col-md-6 gx-2">
+              <img src="images/mac.png" alt="" class="img-fluid w-75" />
+            </div>
+            <div class="col-md-6">
+              <h1>Customize your blue 24-Inch iMac with Apple M1 Chip</h1>
+              <p>
+                Apple M1 chip with 8-core CPU performance cores and 4 efficiency
+                cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory
+                256GB SSD Storage Two Thunderbolt / USB ports Magic Mouse ,
+                Magic Keyboard US English
+              </p>
+              <br />
+              <div>
+                <p class="fw-bold">Memory</p>
+                <button
+                  onclick="updateMemoryPrice('8gb')"
+                  class="btn btn-outline-dark me-2"
+                >
+                  8GB unified memory</button
+                ><button
+                  onclick="updateMemoryPrice('16gb')"
+                  class="btn btn-outline-dark"
+                >
+                  16GB unified memory
+                </button>
+              </div>
+              <br />
+              <br />
+              <div>
+                <p class="fw-bold">Storage</p>
+                <button
+                  onclick="updateStoragePrice('256gb')"
+                  class="btn btn-outline-dark"
+                >
+                  256GB SSD Storage</button
+                ><button
+                  onclick="updateStoragePrice('512gb')"
+                  class="btn btn-outline-dark mx-2"
+                >
+                  512GB SSD Storage
+                </button>
+                <button
+                  onclick="updateStoragePrice('1tb')"
+                  class="btn btn-outline-dark"
+                >
+                  1TB SSD Storage
+                </button>
+              </div>
+              <br />
+              <br />
+              <div>
+                <p class="fw-bold">Choose your delivery option</p>
+                <button onclick="updateDeliveryCharge('free')" class="btn btn-outline-dark me-2">
+                  Friday, Aug25, Free prime delivery</button
+                ><button onclick="updateDeliveryCharge('premium')"" class="btn btn-outline-dark">
+                  Friday, Aug25, delivery charge $20
+                </button>
+              </div>
+              <br />
+              <br />
+              <!----------------Pricing Part---------- -->
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold">Best price</p>
+                <p class="fw-bold">$<span id="initial-price">1299</span></p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold">Extra memory cost</p>
+                <p class="fw-bold">$<span id="memory-price">0</span></p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold">Extra storage cost</p>
+                <p class="fw-bold">$<span id="storage-price">0</span></p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold">Delivery charge</p>
+                <p class="fw-bold">$<span id="delivery-charge">0</span></p>
+              </div>
+              <hr style="color: black; height: 2px" />
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold">Total Price</p>
+                <p class="fw-bold">$<span id="total-price">1299</span></p>
+              </div>
+              <br />
+              <div>
+                <!--------------Promo Code Part ----------- -->
+                <p class="fw-bold">Add promo code</p>
+                <input id="promoCode-input" class="d-inline-block input-group w-50" type="text" />
+                <button id="promo-btn" onclick="updatePromoCode()" class="btn-danger rounded-2 px-3 py-1">Apply</button>
+                <p id="notify" style="color: red; display: none; ;">❌ Promo Code Didn't Match, Please try again! </p>
+              </div>
+            </div>
+          </div>
+          <hr style="color: black; height: 2px" />
+          <h1 class="text-center">Total: $<span id="final-price">1299</span></h1>
+        </div>
+      </section>
+    </main>
+    <!---------------------Main end----------------- -->
+
+    <!--------------Bootstrap  Js  link----------------->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!----------------External Js Link---------- -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
